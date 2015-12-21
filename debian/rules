@@ -1,0 +1,21 @@
+#!/usr/bin/make -f
+
+# Uncomment this to turn on verbose mode.
+#export DH_VERBOSE=1
+
+# This has to be exported to make some magic below work.
+export DH_OPTIONS
+
+%:
+	dh $@ --with autoreconf
+
+override_dh_auto_configure:
+	dh_auto_configure -- --enable-shared --enable-static
+
+override_dh_auto_install:
+	dh_auto_install
+	mv $(CURDIR)/debian/tmp/usr/share/doc/libsigc++-2.0 $(CURDIR)/debian/tmp/usr/share/doc/libsigc++-2.0-doc
+	dh_installexamples -plibsigc++-2.0-doc examples/*.cc
+
+override_dh_compress:
+	dh_compress -A -X.tag
