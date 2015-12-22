@@ -1,3 +1,9 @@
+libsigc++-2.0 (2.6.2-1blankon2) tambora; urgency=medium
+
+  * Added; Provides: libsigc++-2.0-0c2a 
+
+ -- mhy <dotovr@mhy>  Tue, 22 Dec 2015 17:25:41 +0700
+
 libsigc++-2.0 (2.6.2-1blankon1) tambora; urgency=medium
 
   * Rebuild 

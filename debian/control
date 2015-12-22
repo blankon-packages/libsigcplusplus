@@ -20,6 +20,7 @@ Section: libs
 Pre-Depends: ${misc:Pre-Depends}
 Depends: ${misc:Depends},
          ${shlibs:Depends}
+Provides: libsigc++-2.0-0c2a
 Conflicts: libsigc++-2.0-0c2a
 Replaces: libsigc++-2.0-0c2a
 Architecture: any
